@@ -1,0 +1,138 @@
+<!--<!DOCTYPE html>-->
+<!--{% load static %}-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Contact</title>-->
+<!--    <link rel="stylesheet" href="{% static 'ca_app/css/all.min.css'%}">-->
+<!--    <link rel="stylesheet" href="{% static 'ca_app/css/bootstrap.css'%}">-->
+<!--</head>-->
+<!--<body>-->
+<!--  <div class="container">-->
+<!--            <h2>Request a <span>Call Back</span></h2>-->
+<!--             <div class="col-sm-9 mb-5">-->
+<!--            <form method="post" action="/contact">-->
+<!--                {% csrf_token %}-->
+
+<!--                <div class="form-row">-->
+<!--                    <div class="form-group col-md-6">-->
+
+<!--                        <label for="inputName">Your_Name</label>-->
+<!--                        <input type="text" name="Your_Name" class="form-control" id="inputName" />-->
+
+<!--                    </div>-->
+
+<!--                    <div class=" form-group col-md-6 ">-->
+
+<!--                        <label for="inputName "> Your_Email*</label>-->
+<!--                        <input type="email" name="Your_Email" class="form-control" id="inputName" required/>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--                <div class=" form-group ">-->
+
+<!--                    <label for="inputSubject ">Phone</label>-->
+<!--                    <input type="text" name="Your_Subject" class="form-control" id="inputSubject" />-->
+<!--                </div>-->
+
+<!--                <div class=" mb-3">-->
+<!--                    <label for="inputSubject ">Your_Message *</label>-->
+<!--                    <textarea class="form-control" name="Your_Message"   id="inputTextarea" required></textarea>-->
+<!--                </div>-->
+
+<!--                <button class="btn btn-primary" type="submit">Send</button>-->
+
+<!--            </form>-->
+<!--        </div>-->
+<!--  </div>-->
+
+<!--        <script src="{% static 'ca_app/js/jquery.js'%}"></script>-->
+<!--        <script src="{% static 'ca_app/js/bootstrap.js'%}"></script>-->
+<!--        <script src="{% static 'ca_app/js/all.min.js'%}"></script>-->
+<!--        <script src="{% static 'ca_app/js/popper.js'%}"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>CA Portal: Make CA Website Within 5 Working Days</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="CA Portal is a complete website solution for Chartered Accountants in India which provides more than 100 customized templates for CA, CS, and Lawyers. Get your website within 5 working days at 10% discount." />
+
+    <link rel="stylesheet" href="{% static 'VirtualCA_app/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'VirtualCA_app/css/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{% static 'VirtualCA_app/css/style.css'%}">
+
+    <script src="{% static 'VirtualCA_app/js/jquery.min.js'%}"></script>
+    <script src="{% static 'VirtualCA_app/js/bootstrap.min.js'%}"></script>
+
+
+</head>
+
+<body>
+
+ <section class="enquiry-sec">
+        <div class="container">
+            <h2>Request a <span>Call Back</span></h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input name="ctl00$txtname" type="text" id="ctl00_txtname" class="form-control" placeholder="Enter Name *">
+                        <span id="ctl00_RequiredFieldValidator1" class="errer" style="color:Red;visibility:hidden;">*</span> </div>
+                    <div class="form-group">
+                        <input name="ctl00$txtmail" type="text" id="ctl00_txtmail" class="form-control" placeholder="Enter Email Address *">
+                        <span id="ctl00_RegularExpressionValidator1" class="errer" style="color:Red;visibility:hidden;">*</span> </div>
+                    <div class="form-group">
+                        <input name="ctl00$txtcontact" type="text" maxlength="12" id="ctl00_txtcontact" class="form-control" placeholder="Enter Phone" onkeypress="return isNumeric(event);">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <textarea name="ctl00$txtremark" rows="5" cols="50" id="ctl00_txtremark" class="form-control" placeholder="Type your message here"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="ctl00$btnsubmit" value="Submit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$btnsubmit&quot;, &quot;&quot;, true, &quot;a&quot;, &quot;&quot;, false, false))" id="ctl00_btnsubmit"
+                            class="btn btn-send">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script>
+        $(document).ready(function() {
+            $('.navbar a.dropdown-toggle').on('click', function(e) {
+                var $el = $(this);
+                var $parent = $(this).offsetParent(".dropdown-menu");
+                $(this).parent("li").toggleClass('open');
+
+                if (!$parent.parent().hasClass('nav')) {
+                    $el.next().css({
+                        "top": $el[0].offsetTop,
+                        "left": $parent.outerWidth() - 4
+                    });
+                }
+
+                $('.nav li.open').not($(this).parents("li")).removeClass("open");
+
+                return false;
+            });
+        });
+    </script>
+    <script language="javascript">
+        $(function() {
+            $('#myNavbar li a[href^="' + location.pathname.split("")[1] + '"]').addClass('active');
+        });
+    </script>
+
+
+
+</body>
+</html>
