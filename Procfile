@@ -1,1 +1,1 @@
-web: gunicorn VirtualCA_project.wsgi --log-file-
+web:gunicorn VirtualCA_project.wsgi:application
