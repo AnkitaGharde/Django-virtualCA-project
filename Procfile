@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run manage.py
+web: gunicorn VirtualCA_project.wsgi --log-file-
